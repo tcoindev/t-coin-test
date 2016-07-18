@@ -1,0 +1,9 @@
+Building T-Coin
+
+See doc/readme-qt.rst for instructions on building T-Coin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of T-Coin.
+
+See doc/build-*.txt for instructions on building hicoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of T-Coin.
