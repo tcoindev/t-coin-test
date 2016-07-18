@@ -963,8 +963,10 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 {
     int64_t nSubsidy = 0;
-    nSubsidy = 1 * COIN;
     if (nHeight <= LAST_POW_BLOCK) {
+      nSubsidy = 1 * COIN;
+    }
+    if (nHeight <= LAST_POW_BLOCK_FIRST) {
       nSubsidy = 100 * COIN;
     }
     if (nHeight <= LAST_PREMINE_BLOCK) { //  premine
@@ -1072,7 +1074,7 @@ unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfS
     bnNew.SetCompact(pindexPrev->nBits);
             
         
-    if((pindexLast->nHeight <= LAST_POW_BLOCK && pindexLast->nHeight > 132714) || pindexLast->nHeight <= LAST_POW_BLOCK_FIRST)
+    if(pindexLast->nHeight <= LAST_POW_BLOCK)
     {
         if(pindexLast->nHeight < 4){
             if (nActualTimespan < nBlockTargetSpacing/3) nActualTimespan = nBlockTargetSpacing/3;
