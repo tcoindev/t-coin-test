@@ -2474,7 +2474,7 @@ bool LoadBlockIndex(bool fAllowNew)
        CTxIn(COutPoint(0000000000, 4294967295), coinbase 04ffff001d010437467269656e6473686970436f696e20506f5320636f696e20666f7220736f6369616c20776974686f7574204153494373206d696e696e67)
         */
         unsigned int nTimeGenesis= fTestNet ? 1468856591 : 1468856654;
-        unsigned int nNonceGenesis= fTestNet ? 0 : 0;
+        unsigned int nNonceGenesis= fTestNet ? 2063900 : 2465904;
 
         const char* pszTimestamp = "SpaceX launches space station docking port for NASA"; // By MARCIA DUNN, Sunday, July 17, 2016 at 1:00 a.m., Herald-Tribune
         CTransaction txNew;
@@ -2507,7 +2507,6 @@ bool LoadBlockIndex(bool fAllowNew)
         }
 
         /* for Genesis Block */
-        /*
         if (true && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
@@ -2537,7 +2536,6 @@ bool LoadBlockIndex(bool fAllowNew)
            printf("block.nNonce = %u \n", block.nNonce);
            printf("block.GetHash = %s\n", block.GetHash().ToString().c_str());
         }
-        */
 
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
