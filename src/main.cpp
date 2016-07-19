@@ -2474,7 +2474,7 @@ bool LoadBlockIndex(bool fAllowNew)
        CTxIn(COutPoint(0000000000, 4294967295), coinbase 04ffff001d010437467269656e6473686970436f696e20506f5320636f696e20666f7220736f6369616c20776974686f7574204153494373206d696e696e67)
         */
         unsigned int nTimeGenesis= fTestNet ? 1468856591 : 1468856654;
-        unsigned int nNonceGenesis= fTestNet ? 2063900 : 2465904;
+        unsigned int nNonceGenesis= fTestNet ? 2216771 : 2465904;
 
         const char* pszTimestamp = "SpaceX launches space station docking port for NASA"; // By MARCIA DUNN, Sunday, July 17, 2016 at 1:00 a.m., Herald-Tribune
         CTransaction txNew;
@@ -2500,7 +2500,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
         // debug print
         if(fTestNet){
-          assert(block.hashMerkleRoot == uint256("0xe81861fbc2bcea87acb2b15a7e200a1e1ecc38113e2fb72e4f161c27bc7b542d"));
+          assert(block.hashMerkleRoot == uint256("0x3fffa62437181fdc2943b511d521311aa57dac324104a7b8792b873d2ce5a9ad"));
         }
         else {
           assert(block.hashMerkleRoot == uint256("0x9eec2656e4030a81269b7323f1420511468ab8e7d91b706cdd0457881600c816"));
