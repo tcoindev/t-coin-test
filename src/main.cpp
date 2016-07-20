@@ -2465,16 +2465,11 @@ bool LoadBlockIndex(bool fAllowNew)
             return false;
         
 
-        /* // Genesis block
-       CBlock(hash=00000669a79e15a4c985d12ab530b090a91e3343f04cc1577e0f6260429ae775, ver=1,
-        hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000,
-        hashMerkleRoot=0dc4b04324f38b6043eecea7dcc1eb952b8f7ebebc698a21329c0b965a9d6003,
-        nTime=1419164474, nBits=1e0fffff, nNonce=2465904, vtx=1, vchBlockSig=)
-       Coinbase(hash=0dc4b04324, nTime=1419164474, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-       CTxIn(COutPoint(0000000000, 4294967295), coinbase 04ffff001d010437467269656e6473686970436f696e20506f5320636f696e20666f7220736f6369616c20776974686f7574204153494373206d696e696e67)
+        /*
+        // Genesis block
         */
-        unsigned int nTimeGenesis= fTestNet ? 1468856591 : 1468856654;
-        unsigned int nNonceGenesis= fTestNet ? 2216771 : 2465904;
+        unsigned int nTimeGenesis= fTestNet ? 1468856591 : 1468896654;
+        unsigned int nNonceGenesis= fTestNet ? 2216771 : 6683113;
 
         const char* pszTimestamp = "SpaceX launches space station docking port for NASA"; // By MARCIA DUNN, Sunday, July 17, 2016 at 1:00 a.m., Herald-Tribune
         CTransaction txNew;
@@ -2503,7 +2498,7 @@ bool LoadBlockIndex(bool fAllowNew)
           assert(block.hashMerkleRoot == uint256("0x3fffa62437181fdc2943b511d521311aa57dac324104a7b8792b873d2ce5a9ad"));
         }
         else {
-          assert(block.hashMerkleRoot == uint256("0x9eec2656e4030a81269b7323f1420511468ab8e7d91b706cdd0457881600c816"));
+          assert(block.hashMerkleRoot == uint256("0xddf24fc7d3b098f23d70e973cb7ec44db96236bb4d584ec147f77237988cb578"));
         }
 
         /* for Genesis Block */
