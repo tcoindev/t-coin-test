@@ -2502,6 +2502,7 @@ bool LoadBlockIndex(bool fAllowNew)
         }
 
         /* for Genesis Block */
+        /*
         if (true && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
@@ -2531,6 +2532,7 @@ bool LoadBlockIndex(bool fAllowNew)
            printf("block.nNonce = %u \n", block.nNonce);
            printf("block.GetHash = %s\n", block.GetHash().ToString().c_str());
         }
+        */
 
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
