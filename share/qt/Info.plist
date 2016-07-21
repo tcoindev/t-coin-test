@@ -3,7 +3,7 @@
 <plist version="0.9">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>hicoin.icns</string>
+	<string>t-coin.icns</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
@@ -17,17 +17,17 @@
 	<key>CFBundleExecutable</key>
 	<string>T-Coin-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.hicoin.T-Coin-Qt</string>
+	<string>org.t-coin.T-Coin-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>org.hicoin.T-CoinPayment</string>
+            <string>org.t-coin.T-CoinPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>hicoin</string>
+              <string>t-coin</string>
             </array>
           </dict>
         </array>

@@ -10,7 +10,7 @@ SetCompressor /SOLID lzma
 !define URL http://www.friendshipcoins.com
 
 # MUI Symbol Definitions
-!define MUI_ICON "..\share\pixmaps\hicoin.ico"
+!define MUI_ICON "..\share\pixmaps\t-coin.ico"
 !define MUI_WELCOMEFINISHPAGE_BITMAP "..\share\pixmaps\nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
@@ -77,7 +77,7 @@ Section -Main SEC0000
 
     # Remove old wxwidgets-based-T-Coin executable and locales:
     Delete /REBOOTOK $INSTDIR\T-Coin.exe
-    Delete /REBOOTOK $INSTDIR\daemon\hicoind.exe
+    Delete /REBOOTOK $INSTDIR\daemon\t-coind.exe
     RMDir /r /REBOOTOK $INSTDIR\daemon
     RMDir /r /REBOOTOK $INSTDIR\locale
 
@@ -87,7 +87,7 @@ Section -Main SEC0000
     File /oname=COPYING.txt ..\COPYING
     File /oname=readme.txt ..\doc\README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File ..\release\hicoind.exe
+    File ..\release\t-coind.exe
     SetOutPath $INSTDIR\doc
     File /r ..\doc\*.*
     SetOutPath $INSTDIR
@@ -111,10 +111,10 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "hicoin" "URL Protocol" ""
-    WriteRegStr HKCR "hicoin" "" "URL:hicoin"
-    WriteRegStr HKCR "hicoin\DefaultIcon" "" $INSTDIR\T-Coin.exe
-    WriteRegStr HKCR "hicoin\shell\open\command" "" '"$INSTDIR\T-Coin.exe" "%1"'
+    WriteRegStr HKCR "t-coin" "URL Protocol" ""
+    WriteRegStr HKCR "t-coin" "" "URL:t-coin"
+    WriteRegStr HKCR "t-coin\DefaultIcon" "" $INSTDIR\T-Coin.exe
+    WriteRegStr HKCR "t-coin\shell\open\command" "" '"$INSTDIR\T-Coin.exe" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections

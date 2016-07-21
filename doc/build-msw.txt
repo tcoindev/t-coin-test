@@ -79,6 +79,6 @@ cp *.h miniupnpc/
 T-Coin
 -------
 DOS prompt:
-cd \hicoin\src
+cd \t-coin\src
 mingw32-make -f makefile.mingw
-strip hicoind.exe
+strip t-coind.exe
