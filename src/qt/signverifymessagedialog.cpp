@@ -24,10 +24,10 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->addressIn_SM->setPlaceholderText(tr("Enter an T-Coin address (e.g. HPHWwxzA9gfTKR4CU1Dfgp5W8C8QSviVk8)"));
+    ui->addressIn_SM->setPlaceholderText(tr("Enter an T-Coin address (e.g. TEojeTEzind1hpbrgesoJ1Vt3eEVuF2CP3)"));
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter an T-Coin address (e.g. HPHWwxzA9gfTKR4CU1Dfgp5W8C8QSviVk8)"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter an T-Coin address (e.g. TEojeTEzind1hpbrgesoJ1Vt3eEVuF2CP3)"));
     ui->signatureIn_VM->setPlaceholderText(tr("Enter T-Coin signature"));
 #endif
 

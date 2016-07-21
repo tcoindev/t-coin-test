@@ -37,7 +37,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a T-Coin address (e.g. HPHWwxzA9gfTKR4CU1Dfgp5W8C8QSviVk8)"));
+    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a T-Coin address (e.g. TEojeTEzind1hpbrgesoJ1Vt3eEVuF2CP3)"));
 #endif
 
     addEntry();
