@@ -12,8 +12,8 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
     unitlist.append(BTC);
+    unitlist.append(cBTC);
     unitlist.append(mBTC);
-    unitlist.append(uBTC);
     return unitlist;
 }
 
@@ -22,8 +22,8 @@ bool BitcoinUnits::valid(int unit)
     switch(unit)
     {
     case BTC:
+    case cBTC:
     case mBTC:
-    case uBTC:
         return true;
     default:
         return false;
@@ -35,8 +35,8 @@ QString BitcoinUnits::name(int unit)
     switch(unit)
     {
     case BTC: return QString("TRC");
-    case mBTC: return QString("mTRC");
-    case uBTC: return QString::fromUtf8("μTRC");
+    case cBTC: return QString("mTRC");
+    case mBTC: return QString::fromUtf8("mTRC");
     default: return QString("???");
     }
 }
@@ -46,8 +46,8 @@ QString BitcoinUnits::description(int unit)
     switch(unit)
     {
     case BTC: return QString("T-Coins");
+    case cBTC: return QString("Centum-T-Coins (1 / 100)");
     case mBTC: return QString("Milli-T-Coins (1 / 1,000)");
-    case uBTC: return QString("Micro-T-Coins (1 / 1,000,000)");
     default: return QString("???");
     }
 }
@@ -56,10 +56,10 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC:  return 100000000;
-    case mBTC: return 100000;
-    case uBTC: return 100;
-    default:   return 100000000;
+    case BTC:  return 100000;
+    case cBTC: return 1000;
+    case mBTC: return 100;
+    default:   return 100000;
     }
 }
 
@@ -67,9 +67,9 @@ int BitcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8; // 21,000,000 (# digits, without commas)
-    case mBTC: return 11; // 21,000,000,000
-    case uBTC: return 14; // 21,000,000,000,000
+    case BTC: return 17; // trillions (# digits, without commas)
+    case cBTC: return 19; // *100
+    case mBTC: return 20; // *1,000
     default: return 0;
     }
 }
@@ -78,9 +78,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8;
-    case mBTC: return 5;
-    case uBTC: return 2;
+    case BTC: return 5;
+    case cBTC: return 3;
+    case mBTC: return 2;
     default: return 0;
     }
 }
